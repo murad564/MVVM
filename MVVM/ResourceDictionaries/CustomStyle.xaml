@@ -2,15 +2,15 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style TargetType="TextBlock">
-        <Setter Property="FontSize" Value="26"></Setter>
-        <Setter Property="Margin" Value="5"></Setter>
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="Margin" Value="5" />
     </Style>
 
     <Style TargetType="Button">
-        <Setter Property="FontSize" Value="26"></Setter>
-        <Setter Property="Margin" Value="5"></Setter>
-        <Setter Property="Cursor" Value="Hand"></Setter>
-        <Setter Property="Background" Value="Black"></Setter>
-        <Setter Property="Foreground" Value="Bisque"></Setter>
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Background" Value="Bisque" />
     </Style>
 </ResourceDictionary>

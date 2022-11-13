@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MVVM.Models
 {
-    public class Entity
+    public abstract class Entity
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
     }
 }

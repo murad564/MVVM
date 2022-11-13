@@ -1,23 +1,19 @@
-﻿using System.Collections.Generic;
-using MVVM.Models;
+﻿using MVVM.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MVVM.Repository.Contexts {
-
+namespace MVVM.Repositories.Contexts
+{
     public class FakeDbContext
     {
-        public static List<Car> Cars { get; set; } = new()
+        public static List<Car> Cars { get; set; } = new List<Car>()
         {
-            new Car { Id = 1, Model = "Kia", Make = "Cerato", Year = 2013 },
-            new Car { Id = 2, Model = "Mercedes", Make = "e320", Year = 2010 },
-            new Car { Id = 3, Model = "Bmw", Make = "M4", Year = 2018 },
-
+            new Car { Id = 1, Make = "Kia", Model = "Cerato", Year = 2013 },
+            new Car { Id = 2, Make = "Kia", Model = "Rio", Year = 2012 },
+            new Car { Id = 3, Make = "BMW", Model = "X6", Year = 2021 }
         };
-
-        public static List<Car> GetCars()
-        {
-            var list = new List<Car>();
-            return list;
-        }
-
     }
 }

@@ -1,0 +1,34 @@
+﻿<Window x:Class="MVVM.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVM.Views"
+        mc:Ignorable="d"
+        Title="MainView" Height="450" Width="800">
+    <!--<StackPanel Width="500">
+        <TextBox Name="txtBox" FontSize="26" Margin="5" />
+        -->
+    <!--<Button Command="{Binding ShowCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" FontSize="26" Margin="5" Content="Show message" />-->
+    <!--
+        <Button Command="{Binding ShowCommand}" CommandParameter="{Binding ElementName=txtBox,Path=Text }" FontSize="26" Margin="5" Content="Show message" />
+    </StackPanel>-->
+
+    <StackPanel Width="300">
+
+        <ComboBox DisplayMemberPath="Model" SelectedItem="{Binding SelectedCar}" ItemsSource="{Binding Cars}" />
+
+        <TextBlock Text="Make" />
+        <TextBlock Text="{Binding SelectedCar.Make}" />
+        <TextBlock Text="Model" />
+        <TextBlock Text="{Binding SelectedCar.Model}" />
+        <TextBlock Text="Year" />
+        <TextBlock Text="{Binding SelectedCar.Year}" />
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Command="{Binding AddCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Content="Add" />
+            <Button Command="{Binding ShowCommand}" CommandParameter="{Binding SelectedCar}" Content="Show" />
+            <Button Command="{Binding EditCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Content="Edit" />
+        </StackPanel>
+    </StackPanel>
+</Window>
